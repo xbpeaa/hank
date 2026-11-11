@@ -1,0 +1,9 @@
+var id = new URLSearchParams(location.search).get("id") || "alcazar_arquitectonico";
+
+fetch("https://xbpeaa.github.io/hank/wbx/" + id + ".html")
+  .then(e => e.text())
+  .then(e => {
+    document.open();
+    document.write(e);
+    document.close();
+  });
